@@ -3,244 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant Menu</title>
+<title>Home</title>
 <link rel="stylesheet" href="styles.css">
 <script src="myScript.js"></script>
+<body>
 <div>
-    <img style="float: inline-start;" width="100" height="140" src="kingCombo.png" alt="King Combo Logo">
+    <a href="index.html"> <img style="float: inline-start;" width="100" height="140" src="kingCombo.png" alt="King Combo Logo"> </a>
     <h1 style="text-align: center; color: #ee0e0e;">KING COMBO</h1>
     <h3 style="text-align: center;">3003 Prospect Ave Kansas City MO 64128</h3>
     <p style="text-align: center;">Order Online with <a href="https://www.doordash.com/store/king-combo-kansas-city-1116891/">DoorDash</a> or <a href="https://www.ubereats.com/store/king-combo/N6t9_PYbSSGbujzTptiGhQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlJlZCUyMExvYnN0ZXIlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIyNjNmOTU0ZS03MzYyLWJkMmItYmRjZi03N2UwZWVmMmU5YTglMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTM4LjkyNjU5NiUyQyUyMmxvbmdpdHVkZSUyMiUzQS05NC40MDIyNjklN0Q%3D">UberEats</a></p>
-    <p style="text-align: center; color: #ee0e0e;"><b>Menu</b></p>
+    <p style="text-align: center; color: #ee0e0e;"> <a><b>Home</b></a> &nbsp <a href="menu.html"><b>Menu</b></a> &nbsp <a href="about.html"><b>About</b></a></p>
+</div><br>
+<div style="padding: 15px;">
+    <h2>Most Orderered Items:</h2>
 </div>
-
+<div class="row">
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/wings.jpg" alt="Wings"></a>
+        <pre>     Chicken Wings</pre>
+        
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/lambrice.jpg" alt="Lamb over Rice"></a>
+        <pre>      Lamb Over Rice</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/philly.jpg" alt="Chicken Philly"></a>
+        <pre>   Chicken Philly Combo</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/dark.jpg" alt="Dark Meat"></a>
+        <pre>         Dark Meat</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/pizza.jpg" alt="Pizza"></a>
+        <pre>  Buffalo Chicken Pizza</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/dessert.jpg" alt="Carrot Cake"></a>
+        <pre>       Carrot Cake </pre>
+    </div>
+   
+</div>
+<div class="row">
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/burger.jpg" alt="Burger"></a>
+        <pre>   Double Cheeseburger</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/ChickenBreast.jpg" alt="Chicken Breat Sandwitch"></a>
+        <pre> Chicken Breat Sandwitch</pre>
+    </div>
+    <div style="padding: 15px;">
+        <a href="menu.html"><img width="200px" height="200px" src="photos/Mozarella.jpg" alt="Mozarella Sticks"></a>
+        <pre>     Mozarella Sticks</pre>
+    </div>
+</div>
 </head>
-<body>
-
-<div id="menu">
-    <div class="category" onclick="toggleMenu('category1')">
-        <span><pre class="pre"><b>                                                                                             WINGS                                                                                                                     COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category1">
-        <div class="menu-item"><pre>                                  #1. 6 pc Wings      $8.99                         with Fries and Drink             $11.99</pre></div>
-        <div class="menu-item"><pre>                                  #2. 9 pc Wings      $12.99                        with Med Fries and Drink         $15.99</pre></div>
-        <div class="menu-item"><pre>                                  #3. 12 pc Wings     $14.99                        with Large Fries and 2 Drinks    $19.99</pre></div>
-        <div class="menu-item"><pre>                                  #4. 20 pc Wings     $24.99                        with Large Fries and 2 Liter     $29.99</pre></div>
-        <div class="menu-item"><pre>                                  #5. 30 pc Wings     $34.99                        with Large Fries and 2 Liter     $39.99</pre></div>
-        <div class="menu-item"><pre>                                  #6. 40 pc Wings     $44.99                        with Large Fries and 2 Liter     $49.99</pre></div>
-        <div class="menu-item"><pre>                                  #7. 50 pc Wings     $54.99                        with Large Fries and 2 Liter     $59.99</pre></div>
-    </div>
-
-    <!-- Repeat the above structure for other categories -->
-    
-</div>
-<div id="menu">
-    <div class="category" onclick="toggleMenu('category2')">
-        <span><pre class="pre"><b>                                                                                BUFFALO/BBQ WINGS                                                                                                       COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category2">
-        <div class="menu-item"><pre>                                  #8.  6 pc, 2 Rolls   $9.99                        with Fries and Drink             $12.99</pre></div>
-        <div class="menu-item"><pre>                                  #9.  9 pc, 3 Rolls   $14.99                       with Med Fries and Drink         $17.99</pre></div>
-        <div class="menu-item"><pre>                                  #10. 12 pc, 4 Rolls  $18.99                       with Large Fries and 2 Drinks    $24.99</pre></div>
-        <div class="menu-item"><pre>                                  #11. 20 pc           $29.99                       with Large Fries and 2 Liter     $34.99</pre></div>
-    </div>
-
-
-    <!-- Repeat the above structure for other categories -->
-    <div class="category" onclick="toggleMenu('category3')">
-        <span><pre class="pre"><b>                                                                                          NUGGETS                                                                                                                   COMBO</b></pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category3">
-        <div class="menu-item"><pre>                                  #12.  6 pc           $3.99                        with Fries and Drink              $6.99</pre></div>
-        <div class="menu-item"><pre>                                  #13.  9 pc           $5.99                        with Fries and Drink              $8.99</pre></div>
-        <div class="menu-item"><pre>                                  #14. 12 pc           $7.99                        with Fries and Drink              $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #15. 20 pc           $11.99                       with Large Fries and 2 Drinks     $16.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category4')">
-        <span><pre class="pre"><b>                                                                                        DARK MEAT                                                                                                                 COMBO</b></pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category4">
-        <div class="menu-item"><pre>                                  #16. 6 pc Dark        $5.99                       with Fries and Drink             $8.99</pre></div>
-        <div class="menu-item"><pre>                                  #17. 9 pc Dark        $7.99                       with Large Fries and 2 Drinks    $12.99</pre></div>
-        <div class="menu-item"><pre>                                  #18. 12 pc Dark       $9.99                       with Large Fries and 2 Drinks    $14.99</pre></div>
-        <div class="menu-item"><pre>                                  #19. 20 pc Dark       $16.99                      with Large Fries and 2 Liter     $22.99</pre></div>
-        <div class="menu-item"><pre>                                  #20. 30 pc Dark       $24.99                      with Large Fries and 2 Liter     $29.99</pre></div>
-        <div class="menu-item"><pre>                                  #21. 40 pc Dark       $34.99                      with Large Fries and 2 Liter     $39.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category5')">
-        <span><pre class="pre"><b>                                                                                       MIX CHICKEN                                                                                                                COMBO</b></pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category5">
-        <div class="menu-item"><pre>                                  #22. 4 pc, 2 Rolls    $5.99                       with Fries and Drink             $8.99</pre></div>
-        <div class="menu-item"><pre>                                  #23. 8 pc, 4 Rolls    $9.99                       with Large Fries and 2 Drinks    $14.99</pre></div>
-        <div class="menu-item"><pre>                                  #24. 12 pc, 5 Rolls   $14.99                      with Large Fries and 2 Liter     $19.99</pre></div>
-        <div class="menu-item"><pre>                                  #25. 20 pc, 10 Rolls  $24.99                      with Large Fries and 2 Liter     $29.99</pre></div>
-        <div class="menu-item"><pre>                                  #26. 30 pc, 15 Rolls  $34.99                      with Large Fries and 2 Liter     $39.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category6')">
-        <span><pre class="pre"><b>                                                                                          TENDERS                                                                                                                    COMBO</b></pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category6">
-        <div class="menu-item"><pre>                                  #27.  3 pc            $4.99                       with Fries and Drink              $7.99</pre></div>
-        <div class="menu-item"><pre>                                  #28.  5 pc            $6.99                       with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #29.  9 pc            $10.99                      with Large Fries and 2 Drinks     $15.99</pre></div>
-        <div class="menu-item"><pre>                                  #30.  20 pc           $24.99                      with Large Fries and 2 Liter      $29.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category7')">
-        <span><pre class="pre"><b>                                                                                         BURGERS                                                                                                                    COMBO</b></pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category7">
-        <div class="menu-item"><pre>                                  #31. Single Cheeseburger   $4.99                  with Fries and Drink              $7.99</pre></div>
-        <div class="menu-item"><pre>                                  #32. Double Cheeseburger   $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #33. Double Texas          $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #34. Double Fatmelt        $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #35. Double Spicymelt      $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #36. Double Trouble        $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #37. Zinger Chicken        $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #38. Zinger Chicken Spicy  $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #39. Double Nacho Burger   $7.99                  with Fries and Drink              $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #40. Double Bacon Burger   $7.99                  with Fries and Drink              $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #41. King Combo Burger     $6.99                  with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item" style="color: #ee0e0e;"><pre>                                                        You can Add Bacon for $1.50 and Pattie for $2</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category8')">
-        <span><pre class="pre"><b>                                                                                      SANDWICHES                                                                                                                COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category8">
-        <div class="menu-item"><pre>                                  #42. Philly Cheesesteak       $7.99               with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #43. Chicken Philly           $7.99               with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #44. Zinger Chicken Philly    $7.99               with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #45. Grill Chicken Sandwitch  $7.99               with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #46. Chicken Breast Sandwitch $6.99               with Fries and Drink               $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #47. Spicy Chicken Sandwitch  $6.99               with Fries and Drink               $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #48. Whiting on Hero          $6.99               with Fries and Drink               $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #49. Fish Sandwitch           $4.99               with Fries and Drink               $7.99</pre></div>
-        <div class="menu-item" style="color: #ee0e0e;"><pre>                                                          You can add Extra Meat on Philly for $3   </pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category9')">
-        <span><pre class="pre"><b>                                                                                                                                                            PIZZA XXL 18"</b>  </pre>  </span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category9">
-        <div class="menu-item"><pre>                                                    #50. Lamb Gyro Pizza           $19.99       </pre></div>
-        <div class="menu-item"><pre>                                                    #51. Buffalo Chicken Pizza     $19.99       </pre></div>
-        <div class="menu-item"><pre>                                                    #52. Desi Chicken Pizza        $19.99       </pre></div><br>
-        <div class="menu-item"><pre>                                                    #53. Pizza Slice               $2.99  <p style="color: #ee0e0e; text-align: center;"> (Ask for Availability) </p>     </pre></div>
-        <div class="menu-item"><pre>                                                    #54. 2 Slices and Drink        $5.99       </pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category10')">
-        <span><pre class="pre"><b>                                                                                             GYROS                                                                                                                       COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category10">
-        <div class="menu-item"><pre>                                  #55. Lamb Gyro         $7.99                      with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #56. Chicken Chicken   $7.99                      with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #57. Mix Gyro          $8.99                      with Fries and Drink               $11.99</pre></div>
-        <div class="menu-item"><pre>                                  #58. Lamb Donner       $7.99                      with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #59. Chicken Donner    $7.99                      with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #60. Falafel on Pita   $7.99                      with Fries and Drink               $10.99</pre></div>
-        <div class="menu-item"><pre>                                  #61. Lamb Rice         $11.99    </pre></div>
-        <div class="menu-item"><pre>                                  #62. Chicken Rice      $11.99    </pre></div>
-        <div class="menu-item"><pre>                                  #63. Mix Rice          $12.99    </pre></div>
-        <div class="menu-item"><pre>                                  #64. Falafel Rice      $11.99    </pre></div>
-        <div class="menu-item"><pre>                                  #65. Fish Rice         $11.99    </pre></div>
-        <div class="menu-item" style="color: #ee0e0e;"><pre>                                                               You can add Extra Meat for $3   </pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category11')">
-        <span><pre class="pre"><b>                                                                                        FISH FILLETS                                                                                                                 COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category11">
-        <div class="menu-item"><pre>                                  #66. 2 pc              $5.99                       with Fries and Drink              $8.99</pre></div>
-        <div class="menu-item"><pre>                                  #67. 4 pc              $10.99                      with Fries and Drink              $14.99</pre></div>
-        <div class="menu-item"><pre>                                  #68. 9 pc              $21.99                      with Large Fries and 2 Liter      $26.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category12')">
-        <span><pre class="pre"> <b>                                                                                    JUMBO SHRIMPS                                                                                                              COMBO</b> </pre></span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category12">
-        <div class="menu-item"><pre>                                  #69. Popcorn Shrimps Basket  $6.99                 with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #70. 6 pc Jumbo Shrimps      $6.99                 with Fries and Drink              $9.99</pre></div>
-        <div class="menu-item"><pre>                                  #71. 9 pc Jumbo Shrimps      $9.99                 with Fries and Drink              $14.99</pre></div>
-        <div class="menu-item"><pre>                                  #72. 15 pc Jumbo Shrimps     $15.99                with Large Fries and 2 Drinks     $19.99</pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category13')">
-        <span>  <pre class="pre"> <b>                                                                                                                               $12.99 FISH & CHICKEN MIX SPECIAL </b>  </pre> </span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category13">
-        <div class="menu-item"><pre>                                                #73. 4 pc Wings, 2 pc Tilapia with Fries and Drink   </pre></div>
-        <div class="menu-item"><pre>                                                #74. 4 pc Wings, 2 pc Whiting with Fries and Drink </pre></div>
-        <div class="menu-item"><pre>                                                #75. 4 pc Wings, Popcorn Shrimps with Fries and Drink </pre></div>
-        <div class="menu-item"><pre>                                                #76. 4 pc Wings, 4 pc Jumbo Shrimps with Fries and Drink </pre></div>
-        <div class="menu-item"><pre>                                                #77. 4 pc Jumbo Shrimps, 2 pc Tilapia with Fries and Drink </pre></div>
-        <div class="menu-item"><pre>                                                #78. 4 pc Jumbo Shrimps, 2 pc Whiting with Fries and Drink </pre></div>
-        <div class="menu-item"><pre>                                                #79. 4 pc Jumbo Shrimps, 4 pc Tenders with Fries and Drink </pre></div>
- 
-    </div>
-    <div class="category" onclick="toggleMenu('category14')">
-        <span>  <pre class="pre"><b>                                                                                                                                                         SALADS </b></pre> </span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category14">
-        <div class="menu-item"><pre>                                                    #80. Garden Salad              $6.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #81. Lamb Gyro Salad           $11.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #82. Chicken Gyro Salad        $11.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #83. Crispy Chicken Salad      $11.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #84. Grill Chicken Salad       $11.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #85. Jumbo Shrimps Salad       $11.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #86. Whiting Fish Salad        $11.99 </pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category15')">
-        <span>  <pre class="pre"> <b>                                                                                                                                                   SIDE ORDERS </b>  </pre> </span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category15">
-        <div class="menu-item"><pre>                                                    #87.  Colslaw                  $2.49 </pre></div>
-        <div class="menu-item"><pre>                                                    #88.  Mac & Cheese             $2.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #89.  Mozarella Sticks         $3.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #90.  Mushrooms                $2.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #91.  Small Fries              $2.49 </pre></div>
-        <div class="menu-item"><pre>                                                    #92.  Small Cheese Fries       $3.49 </pre></div>
-        <div class="menu-item"><pre>                                                    #93.  Large Fries              $3.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #94.  Large Cheese Fries       $4.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #95.  Small Onion Rings        $2.49 </pre></div>
-        <div class="menu-item"><pre>                                                    #96.  Large Onion Rings        $3.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #97.  Ranch                    $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #98.  Honey Mustard            $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #99.  Jalapenos Cup            $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #100. Hot Sauce Cup            $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #101. Buffalo Sauce Cup        $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #102. BBQ Sauce Cup            $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #103. White Sauce Cup          $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #104. Cheese Cup               $0.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #105. Pita Bread               $0.99 </pre></div>
-    </div>
-    <div class="category" onclick="toggleMenu('category16')">
-        <span>  <pre class="pre"> <b>                                                                                                                                                      DESSERTS </b>  </pre> </span>
-        <span class="arrow">&#9660;</span>
-    </div>
-    <div class="menu" id="category16">
-        <div class="menu-item"><pre>                                                    #106.  Carrot Cake             $2.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #107.  Chocolate Cake          $2.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #108.  Oreo Cake               $2.99 </pre></div>
-        <div class="menu-item"><pre>                                                    #109.  Strawberry Cake         $2.99 </pre></div>
-    </div>
-</div>
-<div>
+<div class="footer">
     <p style="text-align: center;"> <a href="Phone: 816 739 5015">Phone: 816 859 5344</a><br>
     <a href="Email: kingcomboinkc@gmail.com">Email: kingcomboinkc@gmail.com</a><br>
     <span>&copy; KING COMBO</span></p>
 </div>
-
 </body>
 </html>

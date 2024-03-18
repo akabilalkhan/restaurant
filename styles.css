@@ -31,3 +31,16 @@ body {
 .menu-item {
     margin-bottom: 5px;
 }
+
+.row {
+    display: inline-flex;
+}
+
+.footer {
+
+    border: #ee0e0e;
+    border-radius: 1;
+    border-top: #ee0e0e;
+    border-color: #ee0e0e;
+
+}
