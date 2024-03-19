@@ -1,11 +1,13 @@
 .pre {
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
+
 }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 .category {
     background-color: #f2f2f2;
@@ -13,6 +15,7 @@ body {
     cursor: pointer;
     border-bottom: 1px solid #ee0e0e;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -33,7 +36,8 @@ body {
 }
 
 .row {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer {
@@ -42,5 +46,51 @@ body {
     border-radius: 1;
     border-top: #ee0e0e;
     border-color: #ee0e0e;
+    padding: 10px;
+    text-align: center;
 
 }
+
+@media (max-width: 100px) {
+    .category {
+      flex-direction: column;
+    }
+  
+    .menu {
+    
+      flex-direction: column;
+    }
+    
+    .menu-item {
+        font-size: 16px;
+  line-height: 1.5;
+    }
+
+   .category .menu .menu-item {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+  
+    .row {
+      flex-direction: column;
+    }
+
+    .arrow {
+       display: none;
+    }
+
+    .p {
+        flex-direction: column;
+    }
+    div {
+        width: 100%;
+      }
+      
+      img {
+        width: 25%;
+      }
+      
+      h1, h3 {
+        width: 75%;
+      }
+  }
