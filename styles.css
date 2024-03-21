@@ -17,8 +17,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: left;
-    min-width: inherit;
 }
 .category.active {
     background-color: #ccc;
@@ -74,5 +72,6 @@ body {
       white-space: pre-wrap;
       text-align: center;
     }
+   
     
   }
