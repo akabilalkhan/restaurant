@@ -1,70 +1,886 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
-<link rel="stylesheet" href="styles.css">
-<script src="myScript.js"></script>
-<body>
-<div>
-    <a href="index.html"> <img style="float: inline-start;" width="100" height="140" src="photos/kingCombo.png" alt="King Combo Logo"> </a>
-    <h1 style="text-align: center; color: #ee0e0e;">KING COMBO</h1>
-    <h3 style="text-align: center;">3003 Prospect Ave Kansas City MO 64128</h3>
-    <p style="text-align: center;">Order Online with <a href="https://www.doordash.com/store/king-combo-kansas-city-1116891/">DoorDash</a>, <a href="https://www.ubereats.com/store/king-combo/N6t9_PYbSSGbujzTptiGhQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlJlZCUyMExvYnN0ZXIlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIyNjNmOTU0ZS03MzYyLWJkMmItYmRjZi03N2UwZWVmMmU5YTglMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTM4LjkyNjU5NiUyQyUyMmxvbmdpdHVkZSUyMiUzQS05NC40MDIyNjklN0Q%3D">UberEats</a> or <a href="https://www.grubhub.com/restaurant/king-combo-3003-prospect-ave-kansas-city/4985224">GrubHub</a></p>
-    <p style="text-align: center; color: #ee0e0e; font-size: large;"> <a><b>Home</b></a> &nbsp <a href="menu.html"><b>Menu</b></a> &nbsp <a href="about.html"><b>About</b></a></p>
-</div><br>
-</head>
-<div style="padding: 15px;">
-    <h2>Most Orderered Items:</h2>
-</div>
-<div class="row">
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/wings.jpg" alt="Wings"></a>
-        <p style="text-align: center;"> Chicken Wings </p>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Style the navbar */
+      #navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      /* Page content */
+      .content {
+        padding: 16px;
+      }
+
+      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky + .content {
+        padding-top: 60px;
+      }
+
+      /* Navbar links */
+      #navbar button {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Set height of body and the document to 100% */
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial;
+      }
+
+      /* Style tab links */
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 10px;
+        font-size: 17px;
+        width: 23%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 50px;
+        height: 100%;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #Home {
+        background-color: #100f0f;
+        overflow: auto;
+      }
+      #Menu {
+        background-color: #100f0f;
+        overflow: auto;
+      }
+      #Contact {
+        background-color: #100f0f;
+        overflow: auto;
+      }
+      #About {
+        background-color: #100f0f;
+        overflow: auto;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        overflow: auto;
+        padding: 15px;
+      }
+
+      /* Clear floats after the columns */
+      .rows:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  
+}
+
+h2{
+    background-color: #ee0e0e;
+    padding: 10px;
+}
+
+/* Slide show */
+image {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.contain {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -5px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.ro:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.col {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.3;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+      /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <dev style="padding: 10px">
+      <a href="index.html">
+        <img
+          style="float: inline-start"
+          width="120"
+          height="180"
+          src="photos/kingCombo.png"
+          alt="King Combo Logo"
+        />
+      </a>
+      <h1 style="text-align: center; color: #ee0e0e">KING COMBO</h1>
+      <h2 style="text-align: center; background-color: #ffffff;">3003 Prospect Ave Kansas City MO 64128</h2>
+      <h3 style="text-align: center"> Hours: 2pm till 1am, All Week </h3>
+    </dev>
+    <div id="navbar">
+      <button class="tablink" onclick="openPage('Home', this, 'black')">
+        Home
+      </button>
+      <button
+        class="tablink"
+        onclick="openPage('Menu', this, 'black')"
+        id="defaultOpen"
+      >
+        Menu
+      </button>
+      <button class="tablink" onclick="openPage('Contact', this, 'black')">
+        Contact
+      </button>
+      <button class="tablink" onclick="openPage('About', this, 'black')">
+        About
+      </button>
+    </div>
+    <p style="text-align: center">
+        Order Online with
+        <a style="color: #ee0e0e;" href="https://www.doordash.com/store/king-combo-kansas-city-1116891/"
+          >DoorDash</a
+        >,
+        <a style="color: #ee0e0e;"
+          href="https://www.ubereats.com/store/king-combo/N6t9_PYbSSGbujzTptiGhQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlJlZCUyMExvYnN0ZXIlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIyNjNmOTU0ZS03MzYyLWJkMmItYmRjZi03N2UwZWVmMmU5YTglMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTM4LjkyNjU5NiUyQyUyMmxvbmdpdHVkZSUyMiUzQS05NC40MDIyNjklN0Q%3D"
+          >UberEats</a
+        >
+        or
+        <a style="color: #ee0e0e;"
+          href="https://www.grubhub.com/restaurant/king-combo-3003-prospect-ave-kansas-city/4985224"
+          >GrubHub</a
+        >
+      </p>
+
+
+    <div id="Home" class="tabcontent">
+        <h2 style="text-align:center">Most Ordered Items</h2>
+
+        <div class="contain">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="photos/dark.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="photos/wings.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="photos/lambrice.jpg" style="width:100%">
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="photos/burger.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="photos/philly.jpg" style="width:100%">
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="photos/Mozarella.jpg" style="width:100%">
+          </div>
+            
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <div class="ro">
+            <div class="col">
+              <img class="demo cursor" src="photos/dark.jpg" style="width:100%" onclick="currentSlide(1)" alt="Dark Meat">
+            </div>
+            <div class="col">
+              <img class="demo cursor" src="photos/wings.jpg" style="width:100%" onclick="currentSlide(2)" alt="Chicken Wings">
+            </div>
+            <div class="col">
+              <img class="demo cursor" src="photos/lambrice.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lamb Rice">
+            </div>
+            <div class="col">
+              <img class="demo cursor" src="photos/burger.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cheeseburger">
+            </div>
+            <div class="col">
+              <img class="demo cursor" src="photos/philly.jpg" style="width:100%" onclick="currentSlide(5)" alt="Philly Cheesesteak">
+            </div>    
+            <div class="col">
+              <img class="demo cursor" src="photos/Mozarella.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mozarella Sticks">
+            </div>
+          </div>
+        </div>
         
     </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/lambrice.jpg" alt="Lamb over Rice"></a>
-        <p style="text-align: center;"> Lamb Over Rice </p>
+   
+    <div id="Menu" class="tabcontent">
+        
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>Wings</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #1 - 6 PC &emsp; &nbsp; $8.99 <br />
+            #2 - 9 PC &emsp; &nbsp; $12.99 <br />
+            #3 - 12 PC &emsp; $14.99 <br />
+            #4 - 20 PC &emsp; $24.99 <br />
+            #5 - 30 PC &emsp; $34.99 <br />
+            #6 - 40 PC &emsp; $44.99 <br />
+            #7 - 50 PC &emsp; $54.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $11.99 <br />
+            $15.99 <br />
+            $19.99 <br />
+            $29.99 <br />
+            $39.99 <br />
+            $49.99 <br />
+            $59.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>BUFFALO | BBQ wings</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #8  - 6 PC, 2 ROLLS &emsp; $9.99 <br>
+            #9  - 9 PC, 3 ROLLS &emsp;  $14.99 <br>
+            #10 - 12 PC. 4 ROLLS &emsp; $18.99 <br>
+            #11  - 20 PC &emsp;  $29.99 <br>
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $12.99 <br>
+$17.99 <br>
+$24.99 <br>
+$34.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>NUGGETS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #12  - 6 PC &emsp; $3.99 <br>
+            #13  - 9 PC &emsp; $5.99 <br>
+            #14  - 12 PC &emsp; $7.99 <br>
+            #15  - 20 PC &emsp;  $11.99 <br>
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $6.99 <br>
+            $8.99 <br>
+            $10.99 <br>
+            $16.99 <br>
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>DARK MEAT</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #16  - 6 PC &emsp; $5.99 <br>    
+#17  - 9 PC &emsp; $7.99 <br>
+#18  - 12 PC &emsp; $9.99 <br>
+#19  - 20 PC &emsp; $16.99 <br>
+#20 - 30 PC &emsp; $24.99 <br>
+#21  - 40 PC &emsp; $34.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $8.99 <br>
+            $12.99 <br>
+            $14.99 <br>
+            $22.99 <br>
+            $29.99 <br>
+            $39.99 
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>MIX CHICKEN</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #22  - 4 PC, 2 ROLLS &emsp; $5.99 <br>
+            #23  - 8 PC,4 ROLLS &emsp;  $9.99 <br>
+            #24  - 12 PC, 5 ROLLS &emsp; $14.99 <br>
+            #25  - 20 PC, 10 ROLLS &emsp; $24.99 <br>
+            #26  - 30 PC, 15 ROLLS &emsp; $34.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $8.99 <br>
+$14.99 <br>
+$19.99 <br>
+$29.99 <br>
+$39.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>TENDERS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #27  - 3 PC &emsp; $4.99 <br>
+#28  - 5 PC &emsp; $6.99 <br>
+#29  - 9 PC &emsp; $10.99 <br>
+#30  - 20 PC &emsp; $24.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $7.99 <br>
+$9.99 <br>
+$15.99 <br>
+$29.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>BURGERS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #31  - Cheeseburger  &emsp; $4.99 <br>
+#32 - Double Cheeseburger &emsp;   $6.99 <br>
+#33 - Double Texas Burger &emsp;  $6.99 <br>
+#34 - Double Fatmelt &emsp; $6.99 <br>
+#35 - Double Spicymelt &emsp; $6.99 <br>
+#36 - Double Trouble Burger &emsp; $6.99 <br>
+#37 - Zinger Chicken Burger &emsp; $6.99 <br>
+#38 - Zinger Spicy Burger &emsp; $6.99 <br>
+#39 - Double Nacho Burger &emsp; $7.99 <br>
+#40 - Double Bacon Burger &emsp; $7.99 <br>
+#41  - King Combo Burger &emsp; $6.99 <br>
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $7.99 <br>
+$9.99 <br>
+$9.99 <br>
+$9.99 <br>
+$9.99 <br>
+$9.99 <br>
+$9.99 <br>
+$9.99 <br>
+$10.99 <br>
+$10.99 <br>
+$9.99 <br>
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>SANDWICHES</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #42 - Philly Cheesesteak &emsp; $7.99 <br>      
+#43 - Chicken Philly &emsp; $7.99 <br> 
+#44 - Zinger Chicken Philly &emsp; $7.99 <br> 
+#45 - Grill Chicken Sandwich &emsp; $7.99 <br> 
+#46 - Chicken Breast Sandwich &emsp; $6.99 <br> 
+#47 - Spicy Chicken Sandwich &emsp; $6.99 <br> 
+#48 - Whitiing on Hero &emsp; $6.99 <br> 
+#49 - Fish Sandwich &emsp; $4.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $10.99 <br> 
+$10.99 <br> 
+$10.99 <br> 
+$10.99 <br> 
+$9.99 <br> 
+$9.99 <br> 
+$9.99 <br> 
+$7.99 <br> 
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">PIZZA XXL 18"</h2>
+          <p style="text-align: center;">
+            #50 - Lamb Gyro Pizza $19.99
+             <br> 
+#51  - Buffalo Chicken Pizza $19.99 <br> 
+#52 - Desi Chicken Pizza (Spicy) $19.99 <br> 
+
+#53 - Pizza Slices (Ask for availability) $2.99 <br> 
+#54 - 2 Slices and Drink (Ask for availability)  $5.99<br> 
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+          <p style="text-align: center;">
+            <a href="menu.html"
+            ><img
+              width="200px"
+              height="140px"
+              src="photos/pizza.jpg"
+              alt="Pizza"
+          /></a>
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color:#100f0f">
+          <h2>GYROS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #55 - Lamb Gyro &emsp; $7.99 <br>
+#56 - Chicken Gyro &emsp; $7.99 <br>
+#57 - Mix Gyro &emsp; $8.99 <br>
+#58 - Lamb Donner &emsp; $7.99 <br>
+#59 - Chicken Donner &emsp; $7.99 <br>
+#60 - Falafel On Pita &emsp; $7.99 <br>
+#61  - Lamb Rice &emsp; $11.99 <br>
+#62 - Chicken Rice &emsp; $11.99 <br>
+#63 - Mix Rice &emsp; $12.99 <br>
+#64 - Falafel Rice &emsp; $11.99 <br>
+#65 - Fish Rice &emsp; $11.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $10.99 <br>
+$10.99 <br>
+$11.99 <br>
+$10.99 <br>
+$10.99 <br>
+$10.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>FISH FILLETS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #66 - 2 PC &emsp; $5.99 <br>
+#67 - 4 PC &emsp; $10.99 <br>
+#68 - 9 PC &emsp; $21.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $8.99 <br>
+$14.99 <br>
+$26.99
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          <h2>JUMBO SHRIMPS</h2>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Regular</h2>
+          <p>
+            #69 - POPCORN SHRIMP &emsp; $6.99 <br>
+            #70 - 6 PC JUMBO &emsp;  $6.99 <br>
+            #71  - 9 PC JUMBO &emsp; $9.99 <br>
+            #72 - 15 PC JUMBO &emsp;  $15.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2>Combo</h2>
+          <p>
+            $9.99 <br>
+$9.99 <br>
+$14.99 <br>
+$19.99 <br>
+          </p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">FISH & CHICKEN
+            MIX SPECIAL $12.99</h2>
+          <p style="text-align: center;">
+            #73 - 4 PC WINGS, 2 TILAPIA WITH FRIES & DRINK <br>
+            #74 - 4 PC WINGS, 2 WHITING WITH FRIES & DRINK <br>
+            #75 - 4 PC WINGS, POP SHRIMPS WITH FRIES & DRINK <br>
+            #76 - 4 PC WINGS, 4 JUMBO SHRIMPS WITH FRIES & DRINK <br>
+            #77 - 4 PC JUMBO, 2 PC TILAPIA WITH FRIES & DRINK <br>
+            #78 - 4 PC JUMBO, 2 PC WHITING WITH FRIES & DRINK <br>
+            #79 - 4 PC JUMBO, 4 PC TENDERS WITH FRIES & DRINK
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div><br>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">SALADS</h2>
+          <p style="text-align: center;">
+            #80 - Garden Salad &emsp; $6.99 <br>
+#81  - Lamb Gyro Salad &emsp; $11.99 <br>
+#82 - Chicken Gyro Salad &emsp; $11.99 <br>
+#83 - Crispy Chicken Salad &emsp; $11.99 <br>
+#84 - Grill Chicken Salad &emsp; $11.99 <br>
+#85 - Jumbo Shrimps Salad &emsp; $11.99 <br>
+#86 - Whiting Fish Salad &emsp; $11.99
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div> <br>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">SIDE ORDERS</h2>
+          <p style="text-align: center;">
+            #87 - Coleslaw &emsp; $2.49 <br>
+#88 - Mac & Cheese &emsp; $2.99 <br>
+#89 - Mozarella Sticks &emsp; $3.99 <br>
+#90 - Mushrooms &emsp; $2.99 <br>
+#91 - Small Fries &emsp; $2.49 <br>
+#92 - Small Cheese Fries &emsp; $3.49 <br>
+#93 - Large Fries &emsp;  $3.99 <br>
+#94 - Large Cheese Fries &emsp;  $4.99 <br>
+#95 - Small Onion Rings &emsp;  $2.49 <br>
+#96 - Large Onion Rings &emsp; $3.99 <br>
+#97 - Ranch &emsp; $0.99 <br>
+#98 - Honey Mustard &emsp; $0.99 <br>
+#99 - Cup of Jalapeños &emsp; $0.99 <br>
+#100- Cup of Hot Sauce &emsp; $0.99 <br>
+#101- Cup of Buffalo Sauce &emsp; $0.99 <br>
+#102- Cup of BBQ Sauce &emsp; $0.99 <br>
+#103- Cup of White Sauce &emsp; $0.99 <br>
+#104- Cup of Cheese &emsp; $0.99 <br>
+#105- Pita Bread &emsp; $0.99 <br>
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div> <br>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">DESSERTS</h2>
+          <p style="text-align: center;">
+            #106 - Carrot Cake &emsp; $2.99 <br>
+            #107 - Chocolate Cake &emsp; $2.99 <br>
+            #108 - Oreo Cake &emsp; $2.99 <br>
+            #109 - Strawberry Cake &emsp; $2.99 <br>
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div> <br>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+         
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">FAMILY ORDERS $39.99</h2>
+          <p style="text-align: center;">
+            #F1 - XXL Pizza (Lamb/Chicken), 9 pc Buffalo Wings, 6 pc Buffalo Tenders, Large Fries, and one 2 Liter or 3 Cans <br>
+#F2 - XXL Pizza (Lamb/Chicken), 4 pc Fish, 8 pc Wings, Large Fries, and one 2 Liter or 3 cans <br>
+#F3 - 2 Gyro Over Rice, 2 Cheeseburgers, 6 pc Dark, Large Fries, and one 2 Liter or 3 Cans <br>
+#F4 - 15 pc Jumbo Shrimps, 15 pc Wings, Large Fries, and one 2 Liter or 3 Cans <br>
+#F5 - 1/2 Pan Gyro Over Rice (Lamb/Chicken/Mix), Salad, Cup of Sauce, 4 Pita Breads <br>
+#F6 - 20 pc Nuggets, 9 pc Tenders, 6 pc Dark, 6 pc Wings, Large Fries, and one 2 liter or 3 Cans 
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div><br>
+      <div class="rows">
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          <h2 style="text-align: center;">CATERING SPECIALS $79.99</h2>
+          <p style="text-align: center;">
+            #C1  - Full Pan Over Rice (Lamb/Chicken/Mix), 1/2 Pan Salad, 8 Pita Breads, and 2 Cup of Sauce <br>
+#C2 - 1/2 Pan Gyro Over Rice, 9 pc Fish, 20 pc Dark, Salad, and 4 Pita Breads, Cup of Sauce <br>
+#C3 - 20 pc Wings, 20 pc Jumbo Shrimps, 9 pc Fish, 2 Large Fries, and one 2 Liter or three Cans <br>
+#C4 - 30 pc Wings, 40 pc Dark, 1/2 Pan Fries, and one 2 Liter or 3 Cans 
+          </p>
+        </div>
+        <div class="column" style="background-color: #100f0f">
+          
+        </div>
+      </div>
+      
+
+
     </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/philly.jpg" alt="Chicken Philly"></a>
-        <p style="text-align: center;"> Chicken Philly Combo </p>
-    </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/dark.jpg" alt="Dark Meat"></a>
-        <p style="text-align: center;"> Dark Meat </p>
-    </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/pizza.jpg" alt="Pizza"></a>
-        <p style="text-align: center;"> Buffalo Chicken Pizza </p>
-    </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/dessert.jpg" alt="Carrot Cake"></a>
-        <p style="text-align: center;"> Carrot Cake </p>
+
+    <div id="Contact" class="tabcontent">
+      <h3>Contact Us</h3>
+      <p>You can reach us via <a style="color: #ee0e0e;" href= "mailto: kingcomboinkc@gmail.com">Email</a>
+        or <a style="color: #ee0e0e;" href="tel: 816 859 5344">Phone</a>
+    </p>
+      
     </div>
    
-</div>
-<div class="row">
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/burger.jpg" alt="Burger"></a>
-        <p style="text-align: center;"> Double Cheeseburger</p>
+    <div id="About" class="tabcontent">
+     
+      <p  style="text-align: center;">We are a Pakistani owned halal food restaurant.
+        We only offer pick up service.<br> You can either call or walk in
+        to place your order. We also provide online ordering via third party. 
+        <br>Some orders might take longer than others.
+        Your patience is apprecoated. <br>For more information please
+        call us at <a style="color: #ef0909;" href="tel: 816 859 5344"> 816 859 5344</a> <br>
+        Thank you!
+        <br><br>
+        
+    </p> 
     </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/ChickenBreast.jpg" alt="Chicken Breat Sandwitch"></a>
-        <p style="text-align: center;"> Chicken Breast Sandwitch</p>
-    </div>
-    <div style="padding: 15px;">
-        <a href="menu.html"><img width="200px" height="200px" src="photos/Mozarella.jpg" alt="Mozarella Sticks"></a>
-        <p style="text-align: center;"> Mozarella Sticks</p>
-    </div>
-</div>
 
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      //slide show
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    </script>
 <div class="footer">
-    <p style="text-align: center;"> Phone:<a href="tel: 816 739 5015"> 816 859 5344</a><br>
-        Email: <a href= "mailto: kingcomboinkc@gmail.com">kingcomboinkc@gmail.com</a><br>
+    <p style="text-align: center;"> Phone: <a href="tel: 816 739 5015"> 816 859 5344</a><br>
+        Email: <a href="mailto: kingcomboinkc@gmail.com"> kingcomboinkc@gmail.com</a><br>
     <span>&copy; KING COMBO</span></p>
-</div>
-</body>
+  </div>
+  </body>
 </html>
