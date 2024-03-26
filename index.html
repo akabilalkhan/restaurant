@@ -209,6 +209,45 @@ image {
   opacity: 1;
 }
 
+/* Table */
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+  font-size: 18px;
+ 
+}
+
+#myTable td {
+  padding: 12px;
+  display: grid
+}
+
+#myTable th {
+    padding: 12px;
+    
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+  padding-left: 20px;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #642222;
+}
+
       /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
       @media screen and (max-width: 600px) {
         .column {
@@ -244,7 +283,7 @@ image {
         Menu
       </button>
       <button class="tablink" onclick="openPage('Contact', this, 'black')">
-        Contact
+        Search Items
       </button>
       <button class="tablink" onclick="openPage('About', this, 'black')">
         About
@@ -791,9 +830,392 @@ image {
     </div>
 
     <div id="Contact" class="tabcontent">
-      <h3>Contact Us</h3>
-      <p>You can reach us via <a style="color: #ee0e0e;" href= "mailto: kingcomboinkc@gmail.com">Email</a>
-        or <a style="color: #ee0e0e;" href="tel: 816 859 5344">Phone</a>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for catagory name e.g burgers.." title="Type in a name">
+        <table id="myTable">
+            <tr class="header">
+              <th style="width:60%; color: #ffffff;"> Catagory Name and Prices</th>
+             
+            </tr>
+            <tr>
+              <td> <div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;">Wings</h2>
+              </div></td>
+              <td> 
+                <p>
+                    <h2>Regular</h2>
+                  #1 - 6 PC &emsp; &nbsp; $8.99 <br />
+                  #2 - 9 PC &emsp; &nbsp; $12.99 <br />
+                  #3 - 12 PC &emsp; $14.99 <br />
+                  #4 - 20 PC &emsp; $24.99 <br />
+                  #5 - 30 PC &emsp; $34.99 <br />
+                  #6 - 40 PC &emsp; $44.99 <br />
+                  #7 - 50 PC &emsp; $54.99
+                </p>
+              </td>
+              <td>
+                <p>
+                    <h2>Combo</h2>
+                  #1 - 6 PC &emsp; &nbsp; $11.99<br />
+                  #2 - 9 PC &emsp; &nbsp; $15.99<br />
+                  #3 - 12 PC &emsp; $19.99 <br />
+                  #4 - 20 PC &emsp; $29.99 <br />
+                  #5 - 30 PC &emsp; $39.99 <br />
+                  #6 - 40 PC &emsp; $49.99 <br />
+                  #7 - 50 PC &emsp; $59.99
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;" >BUFFALO | BBQ wings</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #8  - 6 PC, 2 ROLLS &emsp; $9.99 <br>
+                  #9  - 9 PC, 3 ROLLS &emsp;  $14.99 <br>
+                  #10 - 12 PC. 4 ROLLS &emsp; $18.99 <br>
+                  #11  - 20 PC &emsp;  $29.99 
+                </p></td>
+                <td>
+                    <h2>Combo</h2>
+          <p>
+            #8  - 6 PC, 2 ROLLS &emsp; $12.99 <br>
+            #9  - 9 PC, 3 ROLLS &emsp;  $17.99 <br>
+            #10 - 12 PC. 4 ROLLS &emsp; $24.99 <br>
+            #11  - 20 PC &emsp;  $34.99
+          </p>
+                </td>
+            </tr>
+            <tr>
+              <td><div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;" >NUGGETS</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #12  - 6 PC &emsp; $3.99 <br>
+                  #13  - 9 PC &emsp; $5.99 <br>
+                  #14  - 12 PC &emsp; $7.99 <br>
+                  #15  - 20 PC &emsp;  $11.99 
+                </p></td>
+                <td><h2>Combo</h2>
+                    <p>
+                      #12  - 6 PC &emsp; $6.99 <br>
+                      #13  - 9 PC &emsp; $8.99 <br>
+                      #14  - 12 PC &emsp; $10.99 <br>
+                      #15  - 20 PC &emsp;  $16.99   
+                    </p></td>
+            </tr>
+            <tr>
+              <td><div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;" >DARK MEAT</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #16  - 6 PC &emsp; $5.99 <br>    
+      #17  - 9 PC &emsp; $7.99 <br>
+      #18  - 12 PC &emsp; $9.99 <br>
+      #19  - 20 PC &emsp; $16.99 <br>
+      #20 - 30 PC &emsp; $24.99 <br>
+      #21  - 40 PC &emsp; $34.99
+                </p></td>
+                <td>
+                    <h2>Combo</h2>
+          <p>
+            #16  - 6 PC &emsp; $8.99 <br>
+#17  - 9 PC &emsp; $12.99 <br>
+#18  - 12 PC &emsp; $14.99 <br>
+#19  - 20 PC &emsp; $22.99 <br>
+#20 - 30 PC &emsp; $29.99 <br>
+#21  - 40 PC &emsp;  $39.99 
+          </p>
+                </td>
+            </tr>
+            <tr>
+              <td> <div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;">MIX CHICKEN</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #22  - 4 PC, 2 ROLLS &emsp; $5.99 <br>
+                  #23  - 8 PC,4 ROLLS &emsp;  $9.99 <br>
+                  #24  - 12 PC, 5 ROLLS &emsp; $14.99 <br>
+                  #25  - 20 PC, 10 ROLLS &emsp; $24.99 <br>
+                  #26  - 30 PC, 15 ROLLS &emsp; $34.99
+                </p></td>
+                <td>
+                    <h2>Combo</h2>
+          <p>
+            #22  - 4 PC, 2 ROLLS &emsp; $8.99 <br>
+            #23  - 8 PC,4 ROLLS &emsp; $14.99 <br>
+            #24  - 12 PC, 5 ROLLS &emsp; $19.99 <br>
+            #25  - 20 PC, 10 ROLLS &emsp; $29.99 <br>
+            #26  - 30 PC, 15 ROLLS &emsp; $39.99
+          </p>
+        </div>
+                </td>
+            </tr>
+            <tr>
+              <td><div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;" >TENDERS</h2>
+              </div></td>
+              <td> <h2>Regular</h2>
+                <p>
+                  #27  - 3 PC &emsp; $4.99 <br>
+      #28  - 5 PC &emsp; $6.99 <br>
+      #29  - 9 PC &emsp; $10.99 <br>
+      #30  - 20 PC &emsp; $24.99
+                </p></td>
+              <td><h2>Combo</h2>
+                <p>
+                  #27  - 3 PC &emsp; $7.99 <br>
+      #28  - 5 PC &emsp; $9.99 <br>
+      #29  - 9 PC &emsp; $15.99 <br>
+      #30  - 20 PC &emsp; $29.99
+                </p></td>
+            </tr>
+            <tr>
+              <td><div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;">BURGERS</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #31  - Cheeseburger  &emsp; $4.99 <br>
+      #32 - Double Cheeseburger &emsp;   $6.99 <br>
+      #33 - Double Texas Burger &emsp;  $6.99 <br>
+      #34 - Double Fatmelt &emsp; $6.99 <br>
+      #35 - Double Spicymelt &emsp; $6.99 <br>
+      #36 - Double Trouble Burger &emsp; $6.99 <br>
+      #37 - Zinger Chicken Burger &emsp; $6.99 <br>
+      #38 - Zinger Spicy Burger &emsp; $6.99 <br>
+      #39 - Double Nacho Burger &emsp; $7.99 <br>
+      #40 - Double Bacon Burger &emsp; $7.99 <br>
+      #41  - King Combo Burger &emsp; $6.99 <br>
+                </p></td>
+                <td>
+                    <h2>Combo</h2>
+          <p>
+            #31  - Cheeseburger  &emsp; $7.99 <br>
+#32 - Double Cheeseburger &emsp;  $9.99 <br>
+#33 - Double Texas Burger &emsp;  $9.99 <br>
+#34 - Double Fatmelt &emsp; $9.99 <br>
+#35 - Double Spicymelt &emsp; $9.99 <br>
+#36 - Double Trouble Burger &emsp; $9.99 <br>
+#37 - Zinger Chicken Burger &emsp; $9.99 <br>
+#38 - Zinger Spicy Burger &emsp; $9.99 <br>
+#39 - Double Nacho Burger &emsp; $10.99 <br>
+#40 - Double Bacon Burger &emsp; $10.99 <br>
+#41  - King Combo Burger &emsp; $9.99 <br>
+          </p>
+                </td>
+            </tr>
+            <tr>
+              <td> <div class="column" style="background-color: #100f0f">
+                <h2 style="background-color: #777;">SANDWICHES</h2>
+              </div></td>
+              <td><h2>Regular</h2>
+                <p>
+                  #42 - Philly Cheesesteak &emsp; $7.99 <br>      
+      #43 - Chicken Philly &emsp; $7.99 <br> 
+      #44 - Zinger Chicken Philly &emsp; $7.99 <br> 
+      #45 - Grill Chicken Sandwich &emsp; $7.99 <br> 
+      #46 - Chicken Breast Sandwich &emsp; $6.99 <br> 
+      #47 - Spicy Chicken Sandwich &emsp; $6.99 <br> 
+      #48 - Whitiing on Hero &emsp; $6.99 <br> 
+      #49 - Fish Sandwich &emsp; $4.99
+                </p></td>
+              <td> <h2>Combo</h2>
+                <p>
+                  #42 - Philly Cheesesteak &emsp; $10.99 <br>      
+      #43 - Chicken Philly &emsp; $10.99 <br> 
+      #44 - Zinger Chicken Philly &emsp; $10.99 <br> 
+      #45 - Grill Chicken Sandwich &emsp; $10.99 <br> 
+      #46 - Chicken Breast Sandwich &emsp; $9.99 <br> 
+      #47 - Spicy Chicken Sandwich &emsp; $9.99 <br> 
+      #48 - Whitiing on Hero &emsp; $9.99 <br> 
+      #49 - Fish Sandwich &emsp; $7.99 <br> 
+                </p></td>
+            </tr>
+            <tr>
+                <td><div class="column" style="background-color:#100f0f">
+                    <h2 style="background-color: #777;" >PIZZA XXL 18"</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #50 - Lamb Gyro Pizza $19.99
+                     <br> 
+        #51  - Buffalo Chicken Pizza $19.99 <br> 
+        #52 - Desi Chicken Pizza (Spicy) $19.99 <br> 
+        
+        #53 - Pizza Slices (Ask for availability) $2.99 <br> 
+        #54 - 2 Slices and Drink (Ask for availability)  $5.99<br> 
+                  </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color:#100f0f">
+                    <h2 style="background-color: #777;" >GYROS</h2>
+                  </div></td>
+                <td><h2>Regular</h2>
+                    <p>
+                      #55 - Lamb Gyro &emsp; $7.99 <br>
+          #56 - Chicken Gyro &emsp; $7.99 <br>
+          #57 - Mix Gyro &emsp; $8.99 <br>
+          #58 - Lamb Donner &emsp; $7.99 <br>
+          #59 - Chicken Donner &emsp; $7.99 <br>
+          #60 - Falafel On Pita &emsp; $7.99 <br>
+          #61  - Lamb Rice &emsp; $11.99 <br>
+          #62 - Chicken Rice &emsp; $11.99 <br>
+          #63 - Mix Rice &emsp; $12.99 <br>
+          #64 - Falafel Rice &emsp; $11.99 <br>
+          #65 - Fish Rice &emsp; $11.99
+                    </p></td>
+                <td> <h2>Combo</h2>
+                    <p>
+                      #55 - Lamb Gyro &emsp; $10.99 <br>
+          #56 - Chicken Gyro &emsp;$10.99 <br>
+          #57 - Mix Gyro &emsp; $11.99 <br>
+          #58 - Lamb Donner &emsp; $10.99 <br>
+          #59 - Chicken Donner &emsp; $10.99 <br>
+          #60 - Falafel On Pita &emsp; $10.99
+                    </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">FISH FILLETS</h2>
+                  </div>
+                    </td>
+                <td>
+                    <h2>Regular</h2>
+                    <p>
+                      #66 - 2 PC &emsp; $5.99 <br>
+          #67 - 4 PC &emsp; $10.99 <br>
+          #68 - 9 PC &emsp; $21.99
+                    </p>
+</td>
+                <td><h2>Combo</h2>
+                    <p>
+                      #66 - 2 PC &emsp;  $8.99 <br>
+          #67 - 4 PC &emsp; $14.99 <br>
+          #68 - 9 PC &emsp; $26.99
+                    </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">JUMBO SHRIMPS</h2>
+                  </div>
+                    </td>
+                <td><h2>Regular</h2>
+                    <p>
+                      #69 - POPCORN SHRIMP &emsp; $6.99 <br>
+                      #70 - 6 PC JUMBO &emsp;  $6.99 <br>
+                      #71  - 9 PC JUMBO &emsp; $9.99 <br>
+                      #72 - 15 PC JUMBO &emsp;  $15.99
+                    </p></td>
+                <td><h2>Combo</h2>
+                    <p>
+                      #69 - POPCORN SHRIMP &emsp; $9.99 <br>
+                      #70 - 6 PC JUMBO &emsp;  $9.99 <br>
+                      #71  - 9 PC JUMBO &emsp; $14.99 <br>
+                      #72 - 15 PC JUMBO &emsp;  $19.99 
+                    </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">FISH & CHICKEN
+                        MIX SPECIAL $12.99</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #73 - 4 PC WINGS, 2 TILAPIA WITH FRIES & DRINK <br>
+                    #74 - 4 PC WINGS, 2 WHITING WITH FRIES & DRINK <br>
+                    #75 - 4 PC WINGS, POP SHRIMPS WITH FRIES & DRINK <br>
+                    #76 - 4 PC WINGS, 4 JUMBO SHRIMPS WITH FRIES & DRINK <br>
+                    #77 - 4 PC JUMBO, 2 PC TILAPIA WITH FRIES & DRINK <br>
+                    #78 - 4 PC JUMBO, 2 PC WHITING WITH FRIES & DRINK <br>
+                    #79 - 4 PC JUMBO, 4 PC TENDERS WITH FRIES & DRINK
+                  </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">SALADS</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #80 - Garden Salad &emsp; $6.99 <br>
+        #81  - Lamb Gyro Salad &emsp; $11.99 <br>
+        #82 - Chicken Gyro Salad &emsp; $11.99 <br>
+        #83 - Crispy Chicken Salad &emsp; $11.99 <br>
+        #84 - Grill Chicken Salad &emsp; $11.99 <br>
+        #85 - Jumbo Shrimps Salad &emsp; $11.99 <br>
+        #86 - Whiting Fish Salad &emsp; $11.99
+                  </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">SIDE ORDERS</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #87 - Coleslaw &emsp; $2.49 <br>
+        #88 - Mac & Cheese &emsp; $2.99 <br>
+        #89 - Mozarella Sticks &emsp; $3.99 <br>
+        #90 - Mushrooms &emsp; $2.99 <br>
+        #91 - Small Fries &emsp; $2.49 <br>
+        #92 - Small Cheese Fries &emsp; $3.49 <br>
+        #93 - Large Fries &emsp;  $3.99 <br>
+        #94 - Large Cheese Fries &emsp;  $4.99 <br>
+        #95 - Small Onion Rings &emsp;  $2.49 <br>
+        #96 - Large Onion Rings &emsp; $3.99 <br>
+        #97 - Ranch &emsp; $0.99 <br>
+        #98 - Honey Mustard &emsp; $0.99 <br>
+        #99 - Cup of Jalapeños &emsp; $0.99 <br>
+        #100- Cup of Hot Sauce &emsp; $0.99 <br>
+        #101- Cup of Buffalo Sauce &emsp; $0.99 <br>
+        #102- Cup of BBQ Sauce &emsp; $0.99 <br>
+        #103- Cup of White Sauce &emsp; $0.99 <br>
+        #104- Cup of Cheese &emsp; $0.99 <br>
+        #105- Pita Bread &emsp; $0.99 <br>
+                  </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">DESSERTS</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #106 - Carrot Cake &emsp; $2.99 <br>
+                    #107 - Chocolate Cake &emsp; $2.99 <br>
+                    #108 - Oreo Cake &emsp; $2.99 <br>
+                    #109 - Strawberry Cake &emsp; $2.99 <br>
+                  </p></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">FAMILY ORDERS $39.99</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #F1 - XXL Pizza (Lamb/Chicken), 9 pc Buffalo Wings, 6 pc Buffalo Tenders, Large Fries, and one 2 Liter or 3 Cans <br>
+        #F2 - XXL Pizza (Lamb/Chicken), 4 pc Fish, 8 pc Wings, Large Fries, and one 2 Liter or 3 cans <br>
+        #F3 - 2 Gyro Over Rice, 2 Cheeseburgers, 6 pc Dark, Large Fries, and one 2 Liter or 3 Cans <br>
+        #F4 - 15 pc Jumbo Shrimps, 15 pc Wings, Large Fries, and one 2 Liter or 3 Cans <br>
+        #F5 - 1/2 Pan Gyro Over Rice (Lamb/Chicken/Mix), Salad, Cup of Sauce, 4 Pita Breads <br>
+        #F6 - 20 pc Nuggets, 9 pc Tenders, 6 pc Dark, 6 pc Wings, Large Fries, and one 2 liter or 3 Cans 
+                  </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div class="column" style="background-color: #100f0f">
+                    <h2 style="background-color: #777;">CATERING SPECIALS $79.99</h2>
+                  </div></td>
+                <td><p style="text-align: center;">
+                    #C1  - Full Pan Over Rice (Lamb/Chicken/Mix), 1/2 Pan Salad, 8 Pita Breads, and 2 Cup of Sauce <br>
+        #C2 - 1/2 Pan Gyro Over Rice, 9 pc Fish, 20 pc Dark, Salad, and 4 Pita Breads, Cup of Sauce <br>
+        #C3 - 20 pc Wings, 20 pc Jumbo Shrimps, 9 pc Fish, 2 Large Fries, and one 2 Liter or three Cans <br>
+        #C4 - 30 pc Wings, 40 pc Dark, 1/2 Pan Fries, and one 2 Liter or 3 Cans 
+                  </p></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+          </table>
     </p>
       
     </div>
@@ -877,6 +1299,26 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+//Table
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
 }
     </script>
 <div class="footer">
