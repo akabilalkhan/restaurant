@@ -5,8 +5,16 @@
     <style>
       /* Style the navbar */
       #navbar {
-        overflow: hidden;
+        /* /*overflow: hidden; */
+        display: flex; 
         background-color: #333;
+      }
+
+      /* Stack navbar buttons on very small screens */
+      @media screen and (max-width: 480px) {
+        #navbar {
+          flex-direction: column;
+        }
       }
 
       /* Page content */
@@ -49,7 +57,7 @@
 
       /* Style tab links */
       .tablink {
-        background-color: #555;
+        /* background-color: #555;
         color: white;
         float: left;
         border: none;
@@ -57,7 +65,14 @@
         cursor: pointer;
         padding: 14px 10px;
         font-size: 17px;
-        width: 23%;
+        width: 23%; */
+        flex: 1; /* This makes all buttons take up equal space automatically */
+        background-color: #555;
+        color: white;
+        border: none;
+        padding: 14px 10px;
+        font-size: 17px;
+        cursor: pointer;
       }
 
       .tablink:hover {
@@ -73,8 +88,13 @@
       }
 
       .row {
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        /* Creates 3 columns on desktop, 1 on mobile */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 20px;
+        padding: 15px;
       }
 
       #Home {
@@ -95,10 +115,13 @@
       }
 
       .column {
-        float: left;
+        /* float: left;
         width: 33.33%;
         overflow: auto;
+        padding: 15px; */
+        width: 100%; /* Let the Grid handle the width now */
         padding: 15px;
+        background-color: #100f0f;
       }
 
       /* Clear floats after the columns */
@@ -259,7 +282,7 @@ image {
     </style>
   </head>
   <body>
-    <dev <div style="display: flex; flexDirection: column; gap: 350px; align-items: center;">
+    <!-- <dev <div style="display: flex; flexDirection: column; gap: 350px; align-items: center;">
       <a href="index.html">
         <img
           style="float: inline-start"
@@ -273,7 +296,19 @@ image {
         <h1 style="text-align: center; color: #ee0e0e">KING COMBO</h1>
         <h2 style="text-align: center; background-color: #ffffff;">3003 Prospect Ave Kansas City MO 64128</h2>
         <h3 style="text-align: center"> Hours: 2pm till 1am, All Week </h3>  
-      </dev>
+      </dev> -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; padding: 20px;">
+  <a href="index.html">
+    <img src="photos/kingCombo.png" width="120" alt="Logo">
+  </a>
+  
+  <div style="text-align: center; flex: 1; min-width: 280px;">
+    <h1 style="color: #ee0e0e; margin: 0;">KING COMBO</h1>
+    <h2 style="background-color: #ffffff; font-size: 1.1rem;">3003 Prospect Ave Kansas City MO 64128</h2>
+    <h3>Hours: 2pm till 1am, All Week</h3>
+  </div>
+
+  </div>
 
    <dev>
       <a href="index.html">
